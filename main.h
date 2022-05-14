@@ -7,5 +7,7 @@
 
 int _putchar(char c);
 void _puts(char *str);
+unsigned int count_spaces(char *s);
+char **strtok(char *str);
 
 #endif
