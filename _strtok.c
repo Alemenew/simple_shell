@@ -19,11 +19,11 @@ unsigned int count_spaces(char *s)
 }
 
 /**
-  *strtok - split a sentence into multiple words.
+  *_strtok - split a sentence into multiple words.
   *@str: the string passed as argument.
   *Return: tokens
   */
-char **strtok(char *str)
+char **_strtok(char *str)
 {
 	int i = 0;
 	const char delim[] = " ";
@@ -37,7 +37,7 @@ char **strtok(char *str)
 		exit(1);
 	}
 
-	token = strtok(str, separator);
+	token = strtok(str, delim);
 
 	while (token != NULL)
 	{
@@ -45,7 +45,7 @@ char **strtok(char *str)
 		token = strtok(NULL, delim);
 		i++;
 	}
-	token[i] = NULL;
+	tokens[i] = NULL;
 
 	return (tokens);
 }

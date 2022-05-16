@@ -5,10 +5,12 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 int _putchar(char c);
 void _puts(char *str);
 unsigned int count_spaces(char *s);
-char **strtok(char *str);
+char **_strtok(char *str);
 
 #endif
