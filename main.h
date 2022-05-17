@@ -48,5 +48,7 @@ unsigned int _strlen(char *str);
 char *_strcat(char *strc1, char *strc2);
 int _strcmpr(char *strcmp1, char *strcmp2);
 char *_strdup(char *strtodup);
+void print_error(vars_t *vars, char *msg);
+char *_uitoa(unsigned int count);
 
 #endif
