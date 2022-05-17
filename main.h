@@ -7,6 +7,32 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <sys/stat.h>
+#include <limits.h>
+#include <signal.h>
+
+/**
+ * struct variables - varables
+ * @av: command line arguments
+ * @buffer: buffer of command
+ * @env: enviroment varables
+ * @count: count of commands enterd
+ * @argv: arguments at opening of shell
+ * @status: exit status
+ * @commands : commands
+ */
+
+typedef struct variables
+{
+	char **av;
+	char *buffer;
+	char **env;
+	size_t count;
+	char **argv;
+	int status;
+	char **commands;
+} vars_t;
+
 
 int _putchar(char c);
 void _puts(char *str);
