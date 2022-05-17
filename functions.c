@@ -7,10 +7,10 @@
 */
 
 
-int _strlen(const char *s)
+int _strlen(char *str)
 {
 int i = 0;
-while (s[i])
+while (str[i])
 	i++;
 
 return (i);
@@ -120,4 +120,3 @@ char *_strcat(char *strc1, char *strc2)
 	newstring[len1 + len2 + 1] = '\0';
 	return (newstring);
 }
-
