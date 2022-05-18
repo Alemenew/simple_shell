@@ -14,7 +14,10 @@ void sig_handler(int sig)
 	(void)sig;
 	signal(SIGINT, sig_handler);
 	write(STDIN_FILENO, new_prompt, 3);
+
+	exit(EXIT_SUCCESS);
 }
+
 
 /**
  * execute - Executes a command in a child process.
