@@ -90,7 +90,7 @@ void handle_line(char **line, ssize_t read)
 		new_line[j++] = old_line[i];
 	}
 	new_line[j] = '\0';
-
+	
 	free(*line);
 	*line = new_line;
 }
