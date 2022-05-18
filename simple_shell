@@ -1,23 +1,23 @@
 #!/bin/bash
 
-echo ls |./hsh
+echo "/bin/ls" | ./hsh
 
-echo ---------
+echo "ls -l /tmp" | ./hsh
 
-echo exit 23|./hsh
-echo $?
-echo ---------
-echo /bin/ls |./hsh
-echo ---------
-echo $?
-echo /bin/ls |sh
-echo ---------
-echo $?
-echo /bin/ls |./hsh
-echo $?
-echo ---------
-echo "/bin/ls "|./hsh
-echo $?
-echo ---------
-echo "/bin/ls "|sh
-echo $?
+echo "env" | ./hsh
+
+echo "ls /var ; ls /var" |./hsh
+
+echo "ls /hbtn ; ls /var" | ./hsh
+
+echo "ls /var && ls /var && ls /var && ls /hbtn" | ./hsh
+
+echo "ls /var && ls /var && ls /var && ls /hbtn" | ./hsh
+
+echo "echo $?" |./hsh
+
+echo "echo $$" |./hsh
+
+echo "echo $PATH" |./hsh
+
+echo "echo $$ # ls -la" | ./hsh
